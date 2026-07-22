@@ -1,0 +1,27 @@
+[package]
+name = "alynxis-core"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Alynxis Part 1: Foundation — core types, config, Zone A/B/C safety skeleton, admin credential placeholder, logging."
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+toml = "0.8"
+sha2 = "0.10"
+argon2 = "0.5"
+uuid = { version = "1", features = ["v4", "serde"] }
+rand = "0.8"
+thiserror = "1"
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter", "fmt", "time", "json"] }
+tracing-appender = "0.2"
+
+[build-dependencies]
+sha2 = "0.10"
+
+[dev-dependencies]
+tempfile = "3"

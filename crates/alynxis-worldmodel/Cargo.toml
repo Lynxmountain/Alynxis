@@ -1,0 +1,20 @@
+[package]
+name = "alynxis-worldmodel"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Alynxis Part 2: WorldModel — concept graph, spatial representation, belief confidence, concept-generalization ingestion."
+
+[dependencies]
+alynxis-core = { path = "../alynxis-core" }
+rusqlite = { version = "0.31", features = ["bundled"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4", "v5", "serde"] }
+thiserror = "1"
+tracing = "0.1"
+
+[dev-dependencies]
+tempfile = "3"

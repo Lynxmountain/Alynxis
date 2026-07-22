@@ -1,0 +1,21 @@
+[package]
+name = "alynxis-bin"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+publish.workspace = true
+description = "Alynxis executable entry point (Part 1 minimal CLI; full REPL arrives Part 12)."
+
+[[bin]]
+name = "alynxis"
+path = "src/main.rs"
+
+[dependencies]
+alynxis-core = { path = "../alynxis-core" }
+alynxis-worldmodel = { path = "../alynxis-worldmodel" }
+alynxis-memory = { path = "../alynxis-memory" }
+alynxis-values = { path = "../alynxis-values" }
+clap = { version = "4", features = ["derive"] }
+rpassword = "7"
+tracing = "0.1"
